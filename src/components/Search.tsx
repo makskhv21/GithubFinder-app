@@ -111,5 +111,10 @@ const SearchContainer = styled.div<{ isDark: boolean }>`
     .noResult {
       left: 500px;
     }
+    button:hover {
+      cursor: pointer;
+      background: #60ABFF;
+      transition: 0.3s;
+    }
 }
 `;
