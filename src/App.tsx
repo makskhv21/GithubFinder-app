@@ -12,11 +12,15 @@ function App() {
 
   useEffect(() => {
     const request = async () => {
-      const response = await axios.get(
-        ` https://api.github.com/users/${userName}`
-      );
-      const data = await response.data;
-      setUserInfo(data);
+      try { 
+        const response = await axios.get(
+          ` https://api.github.com/users/${userName}`
+        );
+        const data = await response.data;
+        setUserInfo(data);
+      } catch(error) {
+        console.log();  
+      }
     };
     request();
   }, []);
