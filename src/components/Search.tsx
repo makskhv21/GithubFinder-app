@@ -76,4 +76,21 @@ const SearchContainer = styled.div<{ isDark: boolean }>`
     font-size: 14px;
     color: #ffffff;
   }
+
+  /* tablet styles */
+  @media only screen and (min-width: 768px) {
+     width: 574px;
+     height: 70px;
+     padding-left: 32px;
+     input {
+    width: 254px;
+    margin: 0 122px 0 22px;
+    font-size: 18px;
+  }
+  button {
+    width: 106px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
 `;

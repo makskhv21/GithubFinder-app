@@ -151,4 +151,60 @@ const ProfileContainer = styled.div<{ isDark: boolean , userInfo: Info | null}>`
     line-height: 19px;
     color: ${(props) => (props.isDark ? "#FFFFFF" : "#4b6a9b")}; 
   }
+  
+  /* tablet styles */
+
+  @media only screen and (min-width: 768px) {
+  width: 574px;
+  height: 480px;
+  padding: 40px 0 0 40px;
+  .userInfo {
+    gap: 40px;
+  }
+  .userInfo img {
+    width: 116px;
+    height: 116px;
+  }
+  .name {
+    font-size: 26px;
+    line-height: 38px;
+  }
+  .login {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .createdAt {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .bio {
+    font-size: 15px;
+    margin-top: 24px;
+  }
+  .followers {
+    width: 492px;
+    gap: 98px;
+    margin: 32px 0;
+    padding: 16px 0 0 32px;
+  }
+  .infoBox {
+    align-items: start;
+  }
+  .statName {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .stat {
+    font-size: 22px;
+    line-height: 33px;
+  }
+  .wrapper {
+    width: 440px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+}
 `;

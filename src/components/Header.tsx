@@ -43,5 +43,11 @@ const HeaderContaier = styled.div<{isDark: boolean }>`
     text-align: right;
     letter-spacing: 2.5px;
     color: ${(props) => (props.isDark ? "#FFFFFF" : "#4b6a9b")}; 
-  } 
+  }
+   
+  /* tablet styles */
+  
+  @media only screen and (min-width: 768px) {
+    width: 574px;
+  }
 `;
