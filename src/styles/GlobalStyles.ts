@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyles = createGlobalStyle<{isDark: boolean }>` 
+const GlobalStyles = createGlobalStyle<{isDarkTheme: boolean }>` 
 *{
     margin: 0;
     padding: 0;
@@ -8,13 +8,13 @@ const GlobalStyles = createGlobalStyle<{isDark: boolean }>`
     box-sizing: border-box;
     font-family: 'Space Mono', monospace;
 }
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 30px;
-    /* background: #F6F8FF; */
-    background: ${(props) => (props.isDark ? "#141D2F" : "#F6F8FF;")};
+    padding-top: 50px;    
+    background: ${(props) => (props.isDarkTheme ? "#141D2F" : "#F6F8FF;")};
 }
 `;
 

@@ -1,22 +1,19 @@
 interface HeaderProps {
-    setIsDark: (isDark: boolean) => void;
-    isDark: boolean;
-    // setUserName: (userName: string) => void;
-    // userName?: string
-    // setUserInfo: (userInfo: Info) => void;
-    // userInfo?: Info
-  }
-  interface UserNameProps {
-    setUserName: (userName: string) => void;
-    userName: string
-  }
+    setIsDarkTheme: (isDarkTheme: boolean) => void;
+    isDarkTheme: boolean;
+}
   
-  interface UserInfoProps {
+interface UserNicknameProps {
+    setUserNickname: (userNickname: string) => void;
+    userNickname: string;
+}
+  
+interface UserInfoProps {
     setUserInfo: (userInfo: Info | null ) => void;
-    userInfo: Info | null
-  }
+    userInfo: Info | null;
+}
   
-  interface Info {
+interface Info {
     login: string;
     id: number;
     node_id: string;
@@ -42,11 +39,11 @@ interface HeaderProps {
     email: string | null,
     hireable: string | null,
     bio: string | null,
-    twitter_username: string | null,
+    twitter_userNickname: string | null,
     public_repos: number,
     public_gists: number,
     followers: number,
     following: number,
     created_at: string,
     updated_at: string,
-}
+};
