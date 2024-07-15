@@ -206,5 +206,36 @@ const ProfileContainer = styled.div<{ isDark: boolean , userInfo: Info | null}>`
     flex-wrap: wrap;
     gap: 18px;
   }
+
+  /* desktop styles */
+
+  @media only screen and (min-width: 1440px) {
+  width: 730px;
+  height: 444px;
+  padding: 48px 0 0 48px;
+    position: relative;
+  .userInfo {
+    align-items: flex-start;
+  }
+  .mainInfo {
+    gap: 2px;
+  }
+ .createdAt {
+  position: absolute;
+  top: 52px;
+  right: 48px;
+ }
+ .bio {
+  margin: -20px 0 0 154px;
+ }
+ .followers {
+    width: 480px;
+    gap: 98px;
+    margin: 32px 0 36px 152px;
+    padding: 16px 0 0 32px;
+  }
+  .wrapper {
+    margin-left: 152px;
+  }
 }
 `;
