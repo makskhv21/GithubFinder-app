@@ -13,7 +13,6 @@ export default function Search(props: HeaderProps & UserNameProps & UserInfoProp
       props.setUserInfo(null);
     }
   }; 
-  console.log(props.userInfo);
   
   return (
     <SearchContainer isDark={props.isDark}>

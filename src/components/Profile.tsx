@@ -8,7 +8,8 @@ import moment from 'moment';
 export default function Profile(props: HeaderProps & UserInfoProps) {
 
     const formattedDate = moment(props.userInfo?.created_at).format('DD MMM YYYY');
-    
+    console.log(props.userInfo?.blog);
+
     return (
         <ProfileContainer isDark={props.isDark}>
           <div className="userInfo">
@@ -37,19 +38,19 @@ export default function Profile(props: HeaderProps & UserInfoProps) {
           <div className="wrapper">
             <div className="wrapperInfo">
               <img src={locationIcon} alt="locationIcon" />
-              <p>{props.userInfo?.location}</p>
+              <p>{props.userInfo?.location == null ? "Not Available" : props.userInfo?.location}</p>
             </div>
              <div className="wrapperInfo">
               <img src={websiteIcon} alt="websiteIcon" />
-              <p>{props.userInfo?.blog}</p>
+              <p>{props.userInfo?.blog == null ? "Not Available" : props.userInfo?.blog}</p>
             </div>
              <div className="wrapperInfo">
               <img src={twwiterIcon} alt="websiteIcon" />
-              <p>{props.userInfo?.twitter_username}</p>
+              <p>{props.userInfo?.twitter_username == null ? "Not Available" : props.userInfo?.twitter_username}</p>
             </div>
              <div className="wrapperInfo">
               <img src={companyIcon} alt="companyIcon" />
-              <p>{props.userInfo?.company}</p>
+              <p>{props.userInfo?.company == null ? "Not Available" : props.userInfo?.company}</p>
             </div>
           </div>
         </ProfileContainer>
