@@ -25,7 +25,7 @@ export default function Profile(props: HeaderProps & UserInfoProps) {
               <p className="createdAt">Joined {formattedDate}</p>
             </div>
           </div>
-          <p>{props.userInfo?.bio}</p>
+          <p className="bio">{props.userInfo?.bio == null ? "No bio available" : props.userInfo.bio}</p>
           <div className="followers">
             {infoBoxes.map((infoBox, index) => (
               <div className="infoBox" key={index}>
@@ -91,9 +91,16 @@ const ProfileContainer = styled.div<{ isDark: boolean , userInfo: Info | null}>`
     color: #0079ff;
   }
   .createdAt {
-font-size: 13px;
+    font-size: 13px;
     line-height: 19px;
     color: ${(props) => (props.isDark ? "#FFFFFF" : "#697C9A")};
+  }
+  .bio {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    color: ${(props) => (props.isDark ? "#FFFFFF" : "#4B6A9B")} ;
+    margin-top: 34px;
   }
   .followers {
     width: 280px;
