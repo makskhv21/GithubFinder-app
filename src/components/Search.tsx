@@ -1,16 +1,23 @@
 import styled from "styled-components";
 import searchIcon from "../assets/searchIcon.svg";
 import axios from "axios";
+import { useState } from "react";
 
 export default function Search(props: HeaderProps & UserNameProps & UserInfoProps) {
+  
+  const [statusCode , setStatusCode] = useState(200);
+
   const request = async () => {
     try{ const response = await axios.get(
       `https://api.github.com/users/${props.userName}`
      );
-     const data = response.data;
-      props.setUserInfo(data);
+      const data = response.data;
+      setStatusCode(response.status)
+      if (response.status ==200) {
+        props.setUserInfo(data);
+      }
     } catch(error) {
-      props.setUserInfo(null);
+      setStatusCode(404);
     }
   }; 
   
@@ -20,7 +27,7 @@ export default function Search(props: HeaderProps & UserNameProps & UserInfoProp
       <input type="text" placeholder="Search username… " onChange={(event) => {
         props.setUserName(event.target.value)
       }}/>
-      {props.userInfo == null ? <p>error</p> : null}
+      {statusCode != 200 ? <p className="noResult">No results</p> : null}
       <button onClick={() => {
         request();
       }}>Search</button>
@@ -50,9 +57,15 @@ const SearchContainer = styled.div<{ isDark: boolean }>`
     border: none;
     &::placeholder {
     color: ${(props) => (props.isDark ? "#ffffff" : "#4B6A9B")};
-  }
+    }
   }
   
+  .noResult {
+   font-weight: 700;
+   font-size: 12px;
+   color: #F74646;
+  }
+   
   button {
     width: 84px;
     height: 46px;
