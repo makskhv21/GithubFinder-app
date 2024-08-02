@@ -17,4 +17,3 @@ GitHubFinder is a web application that allows users to search for GitHub profile
 4. Open a web browser and paste url: ``` http://localhost:5173/ ```
 
 ![alt text](./assets/image.png)
-![alt text](./assets/image-1.png)
