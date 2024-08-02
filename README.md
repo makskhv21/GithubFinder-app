@@ -2,8 +2,6 @@
 
 GitHubFinder is a web application that allows users to search for GitHub profiles, view detailed information about repositories, followers, and more, providing an intuitive and seamless experience for discovering and exploring GitHub users.
 
-## PHOTO 
-
 ## Built with
 
 - [React](https://reactjs.org/);
@@ -17,3 +15,6 @@ GitHubFinder is a web application that allows users to search for GitHub profile
 2. Install dependencies: ``` npm install ```
 3. Start the server: ``` npm run dev ```
 4. Open a web browser and paste url: ``` http://localhost:5173/ ```
+
+![alt text](./assets/image.png)
+![alt text](./assets/image-1.png)
