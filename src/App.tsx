@@ -29,8 +29,11 @@ function App() {
     <>
       <GlobalStyles isDarkTheme={isDarkTheme}  />
       <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
-      <Search isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} userNickname={userNickname} setUserNickname={setuserNickname} userInfo={userInfo} setUserInfo={setUserInfo} />
-      <Profile isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} userInfo={userInfo} setUserInfo={setUserInfo} />
+      <Search isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} 
+              userNickname={userNickname} setUserNickname={setuserNickname} 
+              userInfo={userInfo} setUserInfo={setUserInfo} />
+      <Profile  isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} 
+                userInfo={userInfo} setUserInfo={setUserInfo} />
     </>
   )
 };
